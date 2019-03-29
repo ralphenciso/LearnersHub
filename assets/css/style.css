@@ -18,11 +18,13 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-	background-position: center;
+	background-position: 0 0;
 	height: 100vh;
 	position: fixed;
 	overflow: hidden;
 }
+
+
 
 @media (max-width: 767.99px){
 	.abtContainer {
@@ -32,6 +34,10 @@ body {
 	}
 }
 	
+.coursesContainer {
+	overflow: auto;
+}
+
 
 
 .navbar, .jumbotron{
@@ -42,14 +48,36 @@ body {
 	position: sticky;
 	top:0;
 	box-shadow: 0 -1px 3px snow;
+	z-index: 100;
 }
 
 
-@media (max-width: 768px){
-	.abtnavbar{
-		background-color: #1b1b1b;
+
+
+
+/*to hide content when scrolled*/
+.navbarScroll {
+   background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('../images/learning.jpg');
+	background-attachment: fixed;
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+/*hide content on scroll mobile*/
+@media (max-width: 767.99px) {
+	.navbar {
+	   background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('../images/learning.jpg');
+		background-attachment: fixed;
+		background-position: 0 0;
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
+		
+	
 }
+
+
 
 
 @keyframes colorChange {
@@ -117,14 +145,18 @@ body {
 
 
 .nav-item + .nav-item{
-	margin-right: 10px;
+	margin-left: 10px;
 }
 
-.navbar-dark .navbar-nav .nav-link.active {
-	background-color: rgba(45,140,55,.6);
-	border-radius: 4px;
+.activelink {
+	text-decoration: underline;
+	color:  	
 }
 
+
+.main {
+	z-index: -1;
+}
 
 
 .jumbotron {
@@ -448,3 +480,150 @@ hr {
 
 
 }
+
+
+/*carousel styling*/
+
+.carousel {
+	margin-top: 20px;
+}
+
+.carouselContent {
+	text-align: center;
+}
+
+
+.cimgContainer {
+	position: relative;
+	display: inline-block;
+	margin: 10px;
+	max-width: 900px;
+	border-radius: 15px;
+	overflow: hidden;
+}
+
+
+
+.cimgContainer img {
+	position: relative;
+	z-index: -100;
+	width: 100%;
+}
+
+
+
+.carousel-indicators {
+	position: relative;
+	border-bottom: 4px solid #695033;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
+	max-width: 140px;
+	padding-bottom: 2px;
+	width: auto;
+	justify-content: space-around;
+	margin: 30px auto;
+}
+
+.carousel-indicators li {
+	box-sizing: border-box;
+	height: 45px;
+	width: 18px;
+	margin: 0;
+	border-radius: 2px;
+	transition: transform .2s ease-in-out;
+	border-width: 5px 1px 35px 1px;
+	border-style: solid;
+}
+
+.carousel-indicators li::after{
+	content: '';
+	display: block;
+	height: 2px;
+	background-color: white;
+	width: 18px;
+	position: relative;
+	left:-1px;
+	top: 33px;
+}
+
+.carousel-indicators .ciedx {
+	border-color: maroon;
+}
+
+.carousel-indicators .cicoursera {
+	border-color: #2a73cc;
+}
+
+.carousel-indicators .ciudemy {
+	border-color: #ec5252;
+}
+
+
+.carousel-indicators .cilynda {
+	border-color: #f1ad0e;
+}
+
+.carousel-indicators .ciytube {
+	border-color: #ff0000;
+}
+
+.carousel-indicators .active {
+	transform: translateY(-10px);	
+	box-shadow: -1px 1px 4px darkgray;
+
+}	
+
+
+.carousel-control-next {
+		right: -30px;
+	}
+
+.carousel-control-prev {
+		left: -30px;
+	}
+
+
+
+.carousel-caption {
+	top: 50%;
+	transform: translateY(-50%);
+	opacity: 0;
+	transition: opacity .3s ease-in;
+}
+
+
+.cimgContainer:hover {
+	background: rgba(0,0,0,.6);
+} 
+
+.cimgContainer:hover .carousel-caption{
+	opacity: 1
+}
+
+
+
+.titleEdx, .titleEdx:hover {
+	text-decoration: underline;
+	text-decoration-color: maroon;
+
+}
+.titleCoursera, .titleCoursera:hover {
+	text-decoration: underline;
+	text-decoration-color: #2a73cc;
+}
+.titleUdemy, .titleUdemy:hover {
+	text-decoration: underline;
+	text-decoration-color: #ec5252;
+}
+.titleLynda, .titleLynda:hover {
+	text-decoration: underline;
+	text-decoration-color: #f1ad0e;
+}
+.titleYoutube, .titleYoutube:hover {
+	text-decoration: underline;
+	text-decoration-color: #ff0000;
+}
+
+
+
+/*carousel end*/

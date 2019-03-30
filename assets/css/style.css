@@ -886,10 +886,15 @@ body {
 
 
 
+.card-body{
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+}
 
 .card-text {
 	font-family: 'Raleway';
-
+	white-space: pre-line;
 }
 
 .cardbg{
@@ -919,12 +924,40 @@ body {
 	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/ComSci/CS50.jpg')
 }
 
+.MITx{
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/ComSci/MIT.jpg')	
+}
+
+.prog{
+	background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.4)), url('../images/courses/ComSci/programming.jpg')	
+}
+
+.algo {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/ComSci/algorithms.jpg')	
+}
+
+.webdev {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/ComSci/webdevcolt.jpg')	
+}
+
+.gamedev {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/ComSci/gamedev.jpg')	
+}
+
+.lynda {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/ComSci/lynda.jpg')	
+}
+.crashcourse {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/ComSci/crashcourse.jpg')	
+}
+
 
 
 
 .card {
 	background-size: cover;
 	background-position: center;
+	height: 300px;
 }
 
 

@@ -155,7 +155,7 @@ body {
 
 
 .main {
-	z-index: -1;
+	z-index: -100;
 }
 
 
@@ -768,7 +768,7 @@ hr {
 	border: 1px solid snow;
 	border-radius: 5px;
 	padding: 10px;
-	z-index: -1;
+	z-index: 1;
 	position: sticky;
 	top: auto;
 
@@ -790,9 +790,110 @@ hr {
 	display: flex;
 }
 
+.card-text {
+	font-family: 'Raleway';
 
+}
 
+.cardbg{
+	background-color: transparent;
+	border-color: snow;
+}
+
+.cardbtn {
+	color: snow;
+    background-color: transparent;
+    border-color: snow;
+	transition: all .3s ease-in-out;
+}
+
+.cardbtn:hover {
+	color: snow;
+	background-color: rgb(150,100,70);
+}
 
 
 
 /*courses end*/
+
+
+/* course items */
+
+.card {
+	background-size: cover;
+	background-position: center;
+}
+
+.cs50 {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/ComSci/CS50.jpg')
+}
+
+
+/* course items end */
+
+
+
+/* explore options */
+
+.exploreOptions {
+	justify-content: space-around;
+	margin: 0 15px;
+
+}
+
+.exploreOptions > div{
+	padding: 15px;
+	min-width: 200px;
+}
+
+
+
+.exploreOptions > div > div{
+	color: snow;
+	border: 1px solid snow;
+	border-radius: 5px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.explore {
+	font-size: 2rem;
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.explore:hover{
+	background-color: darkgrey;
+}
+
+.exploreFilter {
+	padding: 20px;
+}
+
+.exploreOptions input {
+	text-align: center;
+	max-width: 100%;
+	border: none;
+	background: none;
+	border-bottom: 1px solid darkgrey;
+	color: snow;
+}
+
+input + input {
+	margin-top: 15px;
+}
+
+
+
+
+@media (max-width: 767.99px) {
+	.expbtn {
+		order: 10;
+	}
+}
+
+
+
+
+/* explore options end */

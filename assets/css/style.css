@@ -48,7 +48,7 @@ body {
 	position: sticky;
 	top:0;
 	box-shadow: 0 -1px 3px snow;
-	z-index: 100;
+	z-index: 1000;
 }
 
 
@@ -479,15 +479,15 @@ body {
 
 
 	.about .Scroll {
-		background-color: rgb(175,170,15);
+		background-color: rgba(175,170,15,.7);
 	}
 
 	.mission .Scroll {
-		background-color: rgb(20,180,80);
+		background-color: rgba(20,180,80,.7);
 	}
 
 	.vision .Scroll {
-		background-color: rgb(140,40,40);
+		background-color: rgba(140,40,40,.7);
 	}
 
 
@@ -496,11 +496,10 @@ body {
 		position: absolute;
 		top: 34px;
 		right: 4px;
-		width: 1px;
+		width: 3px;
 		height: 0; /*initial height to be adjusted by JS*/
 		border-radius: 50%;
 	}
-
 
 
 
@@ -516,6 +515,12 @@ body {
 	color: #f1f1f1;
 	margin: 0;
 }
+@media (max-width: 767.99px){
+	#cTitle {
+		font-size: 1.2rem;
+	}
+}
+
 
 .carousel {
 	margin-top: 10px;
@@ -544,6 +549,43 @@ body {
 	z-index: -100;
 	width: 100%;
 }
+
+
+.carousel-caption{
+	bottom: auto;
+	left: auto;
+	right: auto;
+	width: 100%;
+	padding: 0 30px;
+	top: 50%;
+	transform: translateY(-50%);
+	opacity: 0;
+	transition: opacity .3s ease-in;
+}
+
+.carousel-caption p {
+	font-family: "Raleway";
+	white-space: pre-line;
+	line-height: 2rem;
+}
+
+
+
+@media(max-width: 767.99px){
+	.cimgContainer {
+		background: rgba(50,50,50,.5);
+	}
+	.carousel-caption{
+		opacity: 1;
+		max-width: 100%;
+	}
+	.carousel-caption p {
+		display: none;
+	}
+
+
+}
+
 
 
 
@@ -632,13 +674,6 @@ body {
 
 
 
-.carousel-caption {
-	top: 50%;
-	transform: translateY(-50%);
-	opacity: 0;
-	transition: opacity .3s ease-in;
-}
-
 
 .cimgContainer:hover {
 	background: rgba(0,0,0,.6);
@@ -678,6 +713,11 @@ body {
 
 
 /*subjects styling*/
+
+.subjectHeader{
+	text-align: center;
+	margin: 15px auto 0 auto;
+}
 
 .subjects {
 	display: flex;
@@ -748,22 +788,22 @@ body {
 
 
 .comSci {
-	background-image:radial-gradient(rgba(0,0,0,.7),rgba(0,0,0,.3) 90%),url('../images/comsci.jpeg'); 
+	background-image:radial-gradient(rgba(0,0,0,.7),rgba(0,0,0,.3) 90%),url('../images/subjects/comsci.jpeg'); 
 }
 .infoTech {
-	background-image:radial-gradient(rgba(0,0,0,.5),rgba(0,0,0,0) 120%),url('../images/technology.jpg'); 
+	background-image:radial-gradient(rgba(0,0,0,.5),rgba(0,0,0,0) 120%),url('../images/subjects/technology.jpg'); 
 }
 .business {
-	background-image:radial-gradient(rgba(0,0,0,.7),rgba(0,0,0,.3) 90%),url('../images/business.jpg'); 
+	background-image:radial-gradient(rgba(0,0,0,.7),rgba(0,0,0,.3) 90%),url('../images/subjects/business.jpg'); 
 }
 .language {
-	background-image:radial-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5) 90%),url('../images/language.jpg'); 
+	background-image:radial-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5) 90%),url('../images/subjects/language.jpg'); 
 }
 .artsHumanities {
-	background-image:radial-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3) 90%),url('../images/arts.jpeg'); 
+	background-image:radial-gradient(rgba(0,0,0,.3),rgba(0,0,0,.3) 90%),url('../images/subjects/arts.jpeg'); 
 }
 .personal {
-	background-image:radial-gradient(rgba(0,0,0,.7),rgba(0,0,0,.3) 90%),url('../images/personal.jpg'); 
+	background-image:radial-gradient(rgba(0,0,0,.7),rgba(0,0,0,.3) 90%),url('../images/subjects/personal.jpg'); 
 }
 
 
@@ -789,9 +829,10 @@ body {
 /*courses styling*/
 
 .courses {
-	margin: 15px 25px;
-	border-radius: 5px;
+	margin: 15px;
 	padding: 10px;
+	padding-top: 0; /*needed for adjusting href*/
+	border-radius: 5px;
 	z-index: 1;
 	position: sticky;
 	top: auto;
@@ -806,13 +847,45 @@ body {
 	padding:10px;
 }
 
-.courses > div[class*=Courses] {
+.courses > div {
 	display: none;
 }
 
-.courses > div[class*=Courses]:target {
+.courses > div:target {
 	display: flex;
+	margin-top: -250px;
 }
+
+/* to adjust positioning for fixed header */
+.courses > div:target::before {
+	content: '';
+	display: block;
+	height: 250px;
+	width: 100%;
+	position: relative;
+}
+
+
+@media (min-width: 471px){
+	.courses > div:target::before {
+		height: 225px;
+	}
+	.courses > div:target {
+		margin-top: -225px;
+	}
+}
+
+@media (min-width: 575px){
+	.courses > div:target::before {
+		height: 220px;
+	}
+	.courses > div:target {
+		margin-top: -220px;
+	}
+}
+
+
+
 
 .card-text {
 	font-family: 'Raleway';

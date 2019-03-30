@@ -150,7 +150,6 @@ body {
 
 .activelink {
 	text-decoration: underline;
-	color:  	
 }
 
 
@@ -169,9 +168,12 @@ body {
 }
 
 
-hr {
-	background-color: snow; 
-}
+.indexhr {
+	background-color: snow;
+	animation-name: colorChange; 
+	animation-duration:20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;}
 
 .mainTitle {
 	font-size: 3rem;
@@ -187,18 +189,13 @@ hr {
 
 .btncontainer {
 	width: 100%;
-	height: 40px;
-	bottom: 20px;
-	left: 0;
+	height: 60px;
+	bottom: 40px;
 	padding: 0 3rem;
 	position: absolute;
+	text-align: center;
 }
 
-.btncontainer >.btn {
-	height: 100%;
-	justify-content: center;
-
-}
 
 
 
@@ -209,24 +206,11 @@ hr {
 		padding-top: 100px;
 	}
 
-	.welcomeText{
-		padding-top: 20px;
-	}
-
-	h3 span + span {
-		
+	.welcomeText span {
 		line-height: 100px; 
+		font-family: "Montserrat";
 	}
 
-
-
-
-
-	.btncontainer {
-		bottom: 40px;
-		height: 60px;
-		text-align: center;
-	}
 
 	.btncontainer > .btn {
 		font-size: 1.5rem;
@@ -265,7 +249,7 @@ hr {
 
 .flexContainer {
 	height: calc(100vh - 58px);
-	width: 100vw;
+	width: 100%;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: center;
@@ -314,7 +298,9 @@ hr {
 .abtText {
 	margin: 0;
 	padding:15px;
-	background-color: rgba(0,0,0,.6);
+	text-align: center;
+	white-space: pre-line;
+
 }
 
 
@@ -367,9 +353,12 @@ hr {
 }
 
 @media (min-width: 767px){
+
+
 	.about {
-		flex-basis: 100%;
+		flex-basis: calc(100% - 194px);
 		transition: all .3s ease-in;
+		overflow: hidden;
 	}
 
 
@@ -383,14 +372,19 @@ hr {
 		position: relative;
 		top: calc(50% - 20px);
 		transition: all .3s ease-in-out;
-
 	}
+
 
 	.about:hover {
-		background: rgba(0,0,0,.6);
-		border-color: rgba(175,170,15,.7);
-
+		border-color: rgba(175,170,15,.7);	
+		overflow:auto;
+		overflow: -moz-scrollbars-none;
+		-ms-overflow-style: none;
 	}
+
+	.about:hover::-webkit-scrollbar { width: 0 !important }
+
+
 
 	.about:hover .abtTitle {
 		top:0;
@@ -401,11 +395,6 @@ hr {
 	}
 
 
-}
-
-
-.mission, .vision {
-	background: rgba(0,0,0,.6);
 }
 
 
@@ -428,7 +417,8 @@ hr {
 
 .mStatement, .vStatement {
 	padding: 15px;
-
+	white-space: pre-line;
+	text-align: center;
 }
 
 
@@ -438,13 +428,14 @@ hr {
 	.mission, .vision {
 		background: none;
 		transition: all .3s ease-in;
-		flex: 0 0 calc(50% - 16px);
+		flex: 0 0 50%;
+		max-height: calc(50% - 16px);	
+		overflow: hidden;
 	}
 
 	.vStatement, .mStatement {
 		opacity: 0;
 		transition: all .3s ease-in;
-
 	}
 
 	.tagLine {
@@ -453,10 +444,6 @@ hr {
 		transition: all .3s ease-in-out;
 	}
 
-
-	.mission:hover, .vision:hover {
-		background: rgba(0,0,0,.5);
-	} 
 	.mission:hover{
 		border-color: rgba(20,180,80,.7);
 	}
@@ -464,6 +451,15 @@ hr {
 	.vision:hover{
 		border-color: rgba(140,40,40,.7);			
 	}
+
+	.mission:hover, .vision:hover{
+		overflow:auto;
+		overflow: -moz-scrollbars-none;
+		-ms-overflow-style: none;
+	}
+
+	.mission:hover::-webkit-scrollbar { width: 0 !important }
+	.vision:hover::-webkit-scrollbar { width: 0 !important }
 
 
 
@@ -765,7 +761,6 @@ hr {
 
 .courses {
 	margin: 15px 25px;
-	border: 1px solid snow;
 	border-radius: 5px;
 	padding: 10px;
 	z-index: 1;
@@ -966,10 +961,10 @@ input + input {
 
 /* group and event items */
 
-.itemsContainer, .eventsContainer {
+.itemsContainer {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-around;
+	justify-content: space-between;
 	align-items: stretch;
 	align-content: center;
 	padding: 5px;

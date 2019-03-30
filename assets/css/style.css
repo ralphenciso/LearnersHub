@@ -354,12 +354,14 @@ body {
 
 @media (min-width: 767px){
 
-
 	.about {
 		flex-basis: calc(100% - 194px);
 		transition: all .3s ease-in;
 		overflow: hidden;
+		position: relative;
 	}
+
+
 
 
 	.abtText {
@@ -395,7 +397,8 @@ body {
 	}
 
 
-}
+} 
+/* mquery end */
 
 
 .tagLine {
@@ -431,6 +434,7 @@ body {
 		flex: 0 0 50%;
 		max-height: calc(50% - 16px);	
 		overflow: hidden;
+		position: relative;
 	}
 
 	.vStatement, .mStatement {
@@ -472,6 +476,31 @@ body {
 	.mission:hover .mStatement, .vision:hover .vStatement {
 		opacity: 1;
 	} 
+
+
+	.about .Scroll {
+		background-color: rgb(175,170,15);
+	}
+
+	.mission .Scroll {
+		background-color: rgb(20,180,80);
+	}
+
+	.vision .Scroll {
+		background-color: rgb(140,40,40);
+	}
+
+
+	/* custom scrolls */
+	.Scroll {
+		position: absolute;
+		top: 34px;
+		right: 4px;
+		width: 1px;
+		height: 0; /*initial height to be adjusted by JS*/
+		border-radius: 50%;
+	}
+
 
 
 

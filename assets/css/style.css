@@ -717,12 +717,6 @@ hr {
 
 /*backgrounds*/
 
-.subjectItem div {
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
-}
-
 .subjectItem a:hover {
 	text-decoration-color: snow;
 } 
@@ -747,6 +741,12 @@ hr {
 	background-image:radial-gradient(rgba(0,0,0,.7),rgba(0,0,0,.3) 90%),url('../images/personal.jpg'); 
 }
 
+
+.subjectItem div {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
 
 
 @media (min-width: 768px){
@@ -818,15 +818,18 @@ hr {
 
 
 /* course items */
+.cs50 {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/ComSci/CS50.jpg')
+}
+
+
+
 
 .card {
 	background-size: cover;
 	background-position: center;
 }
 
-.cs50 {
-	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/ComSci/CS50.jpg')
-}
 
 
 /* course items end */
@@ -836,7 +839,7 @@ hr {
 /* explore options */
 
 .exploreOptions {
-	justify-content: space-around;
+	justify-content: space-between;
 	margin: 0 15px;
 
 }
@@ -861,6 +864,7 @@ hr {
 	position: relative;
 	top: 50%;
 	transform: translateY(-50%);
+	cursor: pointer;
 }
 
 .explore:hover{
@@ -884,6 +888,11 @@ input + input {
 	margin-top: 15px;
 }
 
+.startdate::before, .enddate::before {
+	content: attr(placeholder) !important;
+	color: #aaa;
+}
+
 
 
 
@@ -894,6 +903,99 @@ input + input {
 }
 
 
-
-
 /* explore options end */
+
+
+/* groups and event */
+
+.gne{
+	margin:0;
+	padding: 10px 15px;
+	height: calc(100vh - 58px);
+	width: 100%;
+}
+
+
+.gne div {
+	margin-bottom: 15px;
+}
+
+
+@media (min-width: 768px) {
+	.gne {
+		position: sticky;
+		top: 60px;
+	}	
+	.gne div {
+		margin-bottom: 0;
+	}
+}
+
+
+.groups, .event {
+	border: 1px solid snow;
+	border-radius: 5px;
+	height: calc(100vh - 62px);
+	overflow: auto;
+}
+
+
+.groupsTitle {
+	background: radial-gradient(rgba(0,0,0,.6),rgba(0,0,0,0)),url('../images/gne/groups/group.jpg');
+}
+
+
+.eventsTitle {
+	background: radial-gradient(rgba(0,0,0,.6),rgba(0,0,0,0)),url('../images/gne/events/events.jpg');
+}
+
+
+.groupsTitle, .eventsTitle {
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+	height: 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+/* groups and event end */
+
+
+/* group and event items */
+
+.itemsContainer, .eventsContainer {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	align-items: stretch;
+	align-content: center;
+	padding: 5px;
+
+}
+
+.flexItem {
+	padding: 5px;
+}
+.Item {
+	padding: 10px;
+	border: 1px solid snow;
+	border-radius: 4px;
+}
+
+.Item h4 {
+	font-size: 1.2rem;
+}
+
+.Item p {
+	font-family: "Raleway";
+	font-size: .9rem;
+}
+
+
+
+
+
+/* group and event items end*/

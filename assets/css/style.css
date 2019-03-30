@@ -484,8 +484,17 @@ hr {
 
 /*carousel styling*/
 
+
+#cTitle {
+	font-family: 'Raleway' !important;
+	font-size: 1.6rem;
+	color: #f1f1f1;
+	margin: 0;
+}
+
 .carousel {
-	margin-top: 20px;
+	margin-top: 10px;
+	text-align: center;
 }
 
 .carouselContent {
@@ -500,6 +509,7 @@ hr {
 	max-width: 900px;
 	border-radius: 15px;
 	overflow: hidden;
+	background: rgba(50,50,50,.3);
 }
 
 
@@ -521,7 +531,7 @@ hr {
 	padding-bottom: 2px;
 	width: auto;
 	justify-content: center;
-	margin: 30px auto;
+	margin: 0 auto 15px auto;
 }
 
 .carousel-indicators li {
@@ -653,8 +663,7 @@ hr {
 	margin: 0 20px;
 	position: sticky;
 	top: 56px;
-	padding-top: 15px;
-
+	padding-top: 5px;
 
 	/*bg fix*/
 	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('../images/learning.jpg');
@@ -742,7 +751,7 @@ hr {
 
 @media (min-width: 768px){
 	.subjectItem div {
-		height: 80px;
+		height: 60px;
 	}
 }
 
@@ -771,8 +780,18 @@ hr {
 
 .courses .card {
 	padding:10px;
-
 }
+
+.courses > div[class*=Courses] {
+	display: none;
+}
+
+.courses > div[class*=Courses]:target {
+	display: flex;
+}
+
+
+
 
 
 

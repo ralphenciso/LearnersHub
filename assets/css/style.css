@@ -25,7 +25,6 @@
 
 
 
-
 @media (max-width: 767.99px){
 
 	.container-fluid {
@@ -37,7 +36,30 @@
 		overflow: auto;
 	}
 }
+
+
+
+/* custom scroll */
+
+@media (min-width: 768px) {
+		.container-fluid::-webkit-scrollbar{
+			width: 10px;	
+		}
+		
+		
+		.container-fluid::-webkit-scrollbar-track, .event::-webkit-scrollbar-track {
+			background: transparent; 
+		}
+		
+		.container-fluid::-webkit-scrollbar-thumb, .event::-webkit-scrollbar-thumb{
+			background: #f1f1f170; 
+			border-radius: 30px;	
+		}
 	
+
+}
+
+
 .coursesContainer {
 	overflow: auto;
 }
@@ -502,7 +524,7 @@
 		right: 4px;
 		width: 3px;
 		height: 0; /*initial height to be adjusted by JS*/
-		border-radius: 50%;
+		border-radius: 2px;
 	}
 
 
@@ -1088,7 +1110,6 @@ input + input {
 	border-radius: 5px;
 	height: calc(100vh - 62px);
 	overflow: auto;
-
 }
 
 @media (max-width: 767px) {
@@ -1096,6 +1117,24 @@ input + input {
 		height: 60vh;
 	}
 }
+
+@media (min-width: 768px) {
+	.groups::-webkit-scrollbar, .event::-webkit-scrollbar{
+		width: 5px;		
+	}
+	
+	.groups::-webkit-scrollbar-track, .event::-webkit-scrollbar-track {
+		background: transparent; 
+	}
+	
+	.groups::-webkit-scrollbar-thumb, .event::-webkit-scrollbar-thumb{
+		background: #f1f1f1bb; 
+		border-radius: 2px;
+	}
+
+}
+
+
 
 
 .groupsTitle {
@@ -1148,21 +1187,131 @@ input + input {
 .flexItem {
 	padding: 5px;
 }
+
 .Item {
-	padding: 10px;
+	padding: 15px;
 	border: 1px solid snow;
 	border-radius: 4px;
+	height: 100px;
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: space-between;
+	transition: all .3s ease-in-out;
 }
 
 .Item h4 {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
+	font-weight: bold;
+	border-bottom: 1px solid gray;
 }
 
-.Item p {
+.Item > p {
 	font-family: "Raleway";
 	font-size: .9rem;
+	white-space: pre-line;
+	overflow: auto;
+	padding-right: 2px;
 }
 
+.Item p::-webkit-scrollbar {
+	width: 2px;		
+}
+
+.Item p::-webkit-scrollbar-track {
+	background: transparent; 
+}
+
+.Item p::-webkit-scrollbar-thumb {
+	background: gray; 
+	border-radius: 2px;
+}
+
+
+
+
+.iCS50{
+	background: linear-gradient(#000000bb,#000000bb), url(../images/courses/ComSci/CS50.jpg)
+}
+.idatasci{
+	background: linear-gradient(#000000bb,#000000bb), url(../images/gne/groups/datasci.jpeg)
+}
+.iedtech{
+	background: linear-gradient(#000000bb,#000000bb), url(../images/gne/groups/edtech.png)
+}
+.iDesign{
+	background: linear-gradient(#000000bb,#000000bb), url(../images/gne/groups/design.jpeg)
+}
+.iJS{
+	background: linear-gradient(#000000bb,#000000bb), url(../images/gne/groups/JS.jpeg)
+}
+.iKorean{
+	background: linear-gradient(#000000bb,#000000bb), url(../images/gne/groups/korean.jpeg)
+}
+.IoT{
+	background: linear-gradient(#000000bb,#000000bb), url(../images/gne/groups/iot.jpeg)
+}
+.ilead{
+	background: linear-gradient(#000000bb,#000000bb), url(../images/gne/groups/leadership.jpeg)
+}
+.isilicon{
+	background: linear-gradient(#000000bb,#000000bb), url(../images/gne/groups/silbeach.jpeg)
+}
+
+.eMJS{
+	background: linear-gradient(#000000bb,#000000bb), url(../images/gne/events/mjs.jpeg)
+}
+.eMayad{
+	background: linear-gradient(#000000bb,#000000bb), url(../images/gne/events/mayad.jpg)
+}
+.eAWS{
+	background: linear-gradient(#000000bb,#000000bb), url(../images/gne/events/AWS.jpeg)
+}
+.esixSigma{
+	background: linear-gradient(#000000bb,#000000bb), url(../images/gne/events/sixsigma.jpeg)
+}
+.enzexpo{
+	background: linear-gradient(#000000bb,#000000bb), url(../images/gne/events/nzexpo.jpg)
+}
+.epse{
+	background: linear-gradient(#000000bb,#000000bb), url(../images/gne/events/pse.jpg)
+}
+.edevcon{
+	background: linear-gradient(#000000bb,#000000bb), url(../images/gne/events/devcon.jpg)
+}
+.eceitex{
+	background: linear-gradient(#000000bb,#000000bb), url(../images/gne/events/ceitex.jpg)
+}
+
+.ecanva{
+	background: linear-gradient(#000000bb,#000000bb), url(../images/gne/events/canva.jpg)
+}
+
+
+
+
+
+
+
+
+
+
+.Item {
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;;
+}
+
+.Item p, .Item a {
+	display: none;
+} 
+
+.Item:hover {
+	height: 300px;
+}
+
+.Item:hover p, .Item:hover a {
+	display: block;
+}
 
 
 

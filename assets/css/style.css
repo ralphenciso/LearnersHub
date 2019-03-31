@@ -919,7 +919,9 @@ a, a:hover{
 	}
 }
 
-
+.card-title {
+	border-bottom: 2px solid gray;
+}
 
 .card-body{
 	display: flex;
@@ -955,6 +957,10 @@ a, a:hover{
 
 
 /* course items */
+
+
+
+
 .cs50 {
 	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/ComSci/CS50.jpg')
 }
@@ -985,15 +991,142 @@ a, a:hover{
 .crashcourse {
 	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/ComSci/crashcourse.jpg')	
 }
+.msdatascience {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/It/datascience.jpg')	
+}
+.dataCom {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/It/cisco.png')	
+}
+.sysAd {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/It/google.png')	
+}
+.circuits {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/It/circuits.jpg')	
+}
+.bchain {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/It/bchain.jpg')	
+}
+.linux {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/It/linux.jpg')	
+}
+.server {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/It/server.jpg')	
+}
+.ltt {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/It/LTT.jpg')	
+}
+.strama {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/business/strama.png')	
+}
+.busanalytics {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/business/analytics.jpg')	
+}
+.schain {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/business/supplychain.jpg')	
+}
+.fin {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/business/finance.jpg')	
+}
+.inve {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/business/InvestmentBanking.jpg')	
+}
+.forex {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/business/forex.jpg')	
+}
+.entrep {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/business/forex.jpg')	
+}
+.leader {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/business/leader.jpg')	
+}
+.bloomberg {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/business/bloomberg.jpg')	
+}
 
+.duolingo {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/language/duolingo.svg')	
+}
 
+.busuu {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/language/busuu.jpg')	
+}
+
+.mango {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/language/mango.webp')	
+}
+.memrise {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/language/memrise.png')	
+}
+.livemocha {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/language/livemocha.png')	
+}
+.livinglang {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/language/livinglang.jpg');	
+	background-position: center;
+}
+.FSI {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/language/FSI.jpg');	
+}
+.jpod {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/language/jpod.png');	
+}
+.pshop {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/arts/pshop.jpg');	
+}
+.graphic {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/arts/calarts.jpg');	
+}
+.mtheory {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/arts/mtheory.jpg');	
+}
+.fashion {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/arts/fashion.jpg');	
+}
+.drawing {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/arts/drawing.jpg');	
+}
+.musicProd {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/arts/mprod.jpg');	
+}
+.photography {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/arts/photography.jpg');	
+}
+.whistory {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/arts/whistory.webp');	
+}
+.wellbeing {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/personal/wellbeing.jpg');	
+}
+.worksmarter {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/personal/worksmarter.jpg');	
+}
+.health {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/personal/health.jpg');	
+}
+.philo {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/personal/philo.jpg');	
+}
+.success {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/personal/sucess.jpg');	
+}
+.learn {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/personal/howtolearn.png');	
+}
+.tedx {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/personal/TEDx.jpg');	
+}
+.motivation {
+	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.6)), url('../images/courses/personal/motivation.jpg');	
+}
 
 
 .card {
+	height: 300px;
 	background-size: cover;
 	background-position: center;
-	height: 300px;
+	background-repeat: no-repeat;
 }
+
 
 
 

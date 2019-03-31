@@ -15,9 +15,25 @@ container.onscroll = function(){
     }
 }
 
+
+// highlight subject selected
+
+var si = document.querySelectorAll('.subjectItem')
+
+si.forEach(function(s){    
+
+    s.onclick = function() {
+        si.forEach(function(s){s.classList.remove('activeSubject')})
+        this.classList.add('activeSubject');
+    }
+
+})
+
 backtop.onclick = function() {
     container.scrollTop = 0;
 }
+
+
 
 
 } //onload end

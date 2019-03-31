@@ -6,8 +6,6 @@
 	color: snow;
 }
 
-body {
-}
 
 
 
@@ -22,15 +20,21 @@ body {
 	height: 100vh;
 	position: fixed;
 	overflow: hidden;
+	scroll-behavior: smooth;
 }
 
 
 
+
 @media (max-width: 767.99px){
+
+	.container-fluid {
+		padding-bottom: 50px;
+	}
+
 	.abtContainer {
 		position: relative;
 		overflow: auto;
-
 	}
 }
 	
@@ -155,6 +159,7 @@ body {
 
 .main {
 	z-index: -100;
+
 }
 
 
@@ -781,10 +786,19 @@ body {
 
 /*backgrounds*/
 
+
+
+a, a:hover{
+	color: snow;
+}
+
 .subjectItem a:hover {
 	text-decoration-color: snow;
 } 
 
+.activeSubject {
+	text-decoration: underline;
+}
 
 .comSci {
 	background-image:radial-gradient(rgba(0,0,0,.7),rgba(0,0,0,.3) 90%),url('../images/subjects/comsci.jpeg'); 
@@ -1044,6 +1058,14 @@ input + input {
 	width: 100%;
 }
 
+@media (max-width: 767px) {
+	.gne{
+		height: auto;
+	}
+}
+
+
+
 
 .gne div {
 	margin-bottom: 15px;
@@ -1066,6 +1088,13 @@ input + input {
 	border-radius: 5px;
 	height: calc(100vh - 62px);
 	overflow: auto;
+
+}
+
+@media (max-width: 767px) {
+	.groups, .event {
+		height: 60vh;
+	}
 }
 
 
@@ -1087,7 +1116,18 @@ input + input {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	position: sticky;
+	top:0;
+	z-index: 100;
 }
+
+
+@media (max-width: 767px) {
+	.groupsTitle, .eventsTitle {
+		height: 60px;
+	}
+}
+
 
 
 /* groups and event end */
@@ -1128,3 +1168,47 @@ input + input {
 
 
 /* group and event items end*/
+
+
+
+
+/* back to top button */
+
+.backtop {
+	display: none; 
+}
+
+
+@media (max-width: 768px) {
+	.backtop svg{
+		max-width: 50px;
+		max-height: 50px;
+	}
+
+	.backtop path {
+		color: #f1f1f1f1;
+	}
+
+
+	.backtop {
+		text-align: center;
+		height: 65px;
+		width: 100%;
+		position: fixed;
+		bottom: 0;
+		padding-top: 7.5px;
+		background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('../images/learning.jpg');
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-position: 0 0;
+		z-index: 500;
+	}	
+
+	.bton {
+		display: block; 
+		
+	}
+}
+
+

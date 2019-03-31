@@ -119,18 +119,22 @@
 
 
 
-.navbar-brand  > i {
-		border: 1px solid snow;
-		padding-right: 6px;
-		padding-left: 3px;
-		border-radius: 3px;  
-		text-align: center;
-		color:snow;
-		animation-name: colorChange; 
-		animation-duration:20s;
-		animation-timing-function: ease-in-out;
-		animation-iteration-count: infinite;
+
+.navbar-brand img{
+	width: 44px;
+	padding: 0 5px;
 }
+
+.navbar-brand {
+	animation-name: colorChange; 
+	animation-duration:20s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	}
+	
+
+
+
 
 
 

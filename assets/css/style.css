@@ -770,12 +770,13 @@
 	z-index: 100;
 }
 
+/*
 @media (max-width: 767.99px) {
 	.subjects {
 			background-size: auto 100vh;
 	}
 }
-
+*/
 
 
 @media (min-width: 768px){

@@ -99,7 +99,6 @@
 		background-position: 0 0 !important;
 		background-repeat: no-repeat;
 		background-size: auto 100vh;
-		-webkit-background-size: cover;
 	}
 		
 	
@@ -1491,8 +1490,7 @@ input + input {
 		bottom: 0;
 		padding-top: 7.5px;
 		background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('../images/learning.jpg');
-		background-size: cover;
-		-webkit-background-size: cover;
+		background-size: auto 100vh;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-position: 0 0;

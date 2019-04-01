@@ -1455,6 +1455,20 @@ input + input {
 	display: none;
 } 
 
+@media (max-width: 767px) {
+	.Item {
+		height: 300px;
+	}
+
+
+	.Item p, .Item a {
+		display: block;
+	}
+
+
+}
+
+
 .Item:hover {
 	height: 300px;
 }

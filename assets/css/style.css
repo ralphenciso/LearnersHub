@@ -85,9 +85,10 @@
 .navbarScroll {
    background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('../images/learning.jpg');
 	background-attachment: fixed;
-	background-position: 0 0;
+	background-position: 0 0 !important;
 	background-repeat: no-repeat;
 	background-size: cover;
+	-webkit-background-size: cover;
 }
 
 /*hide content on scroll mobile*/
@@ -95,9 +96,10 @@
 	.navbar {
 	   background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('../images/learning.jpg');
 		background-attachment: fixed;
-		background-position: 0 0;
+		background-position: 0 0 !important;
 		background-repeat: no-repeat;
 		background-size: cover;
+		-webkit-background-size: cover;
 	}
 		
 	
@@ -763,9 +765,10 @@
 	/*bg fix*/
 	background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('../images/learning.jpg');
 	background-attachment: fixed;
-	background-position: 0 0;
+	background-position: 0 0 !important;
 	background-repeat: no-repeat;
 	background-size: cover;
+	-webkit-background-size: cover;
 	z-index: 100;
 }
 
@@ -849,6 +852,7 @@ a, a:hover{
 .subjectItem div {
 	background-repeat: no-repeat;
 	background-size: cover;
+	-webkit-background-size: cover;
 	background-position: center;
 }
 
@@ -1127,6 +1131,7 @@ a, a:hover{
 .card {
 	height: 300px;
 	background-size: cover;
+	-webkit-background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
 }
@@ -1435,8 +1440,10 @@ input + input {
 .Item {
 	background-position: center;
 	background-repeat: no-repeat;
-	background-size: cover;;
+	background-size: cover;
+	-webkit-background-size: cover;
 }
+
 
 .Item p, .Item a {
 	display: none;
@@ -1485,6 +1492,7 @@ input + input {
 		padding-top: 7.5px;
 		background: linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),url('../images/learning.jpg');
 		background-size: cover;
+		-webkit-background-size: cover;
 		background-repeat: no-repeat;
 		background-attachment: fixed;
 		background-position: 0 0;
